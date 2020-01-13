@@ -1,6 +1,5 @@
 .DS_Store
-node_modules
-/dist
+**/node_modules
 
 # local env files
 .env.local
@@ -19,3 +18,13 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore builds
+/app/dist
+/server/public
+
+# Ignore certs
+certs
+
+# Ignore config
+config.js

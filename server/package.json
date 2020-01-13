@@ -1,0 +1,30 @@
+{
+  "name": "picontrol-server",
+  "version": "1.0.0",
+  "description": "Picontrol server and API",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build --prefix ../app && mv ../app/dist src/public && node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bulma": "^0.8.0",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.3",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "qs": "^6.9.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
