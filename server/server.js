@@ -8,6 +8,7 @@ const piholeMw = require('./pihole.js');
 
 // Certs
 const privateKey = fs.readFileSync(config.key);
+const passPhrase = fs.readFileSync(config.passphrase);
 const certificate = fs.readFileSync(config.cert);
 
 // Configure express
@@ -27,6 +28,6 @@ app.get('/lists', piholeMw.getLists);
 app.post('/lists', piholeMw.addToList({secret: config.secret}));
 
 // Configure server
-const server = https.createServer({key: privateKey, cert: certificate}, app);
+const server = https.createServer({key: privateKey, cert: certificate, passphrase: passPhrase}, app);
 server.listen(config.port);
 console.log(`Server listening at https://${config.hostname}:${config.port}\n`);
