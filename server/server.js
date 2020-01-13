@@ -28,6 +28,6 @@ app.get('/lists', piholeMw.getLists);
 app.post('/lists', piholeMw.addToList({secret: config.secret}));
 
 // Configure server
-const server = https.createServer({key: privateKey, cert: certificate, passphrase: passPhrase}, app);
+const server = https.createServer({key: privateKey, cert: certificate, passphrase: passPhrase.toString()}, app);
 server.listen(config.port);
 console.log(`Server listening at https://${config.hostname}:${config.port}\n`);
