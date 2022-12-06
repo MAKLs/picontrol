@@ -15,7 +15,7 @@
     "jsdoc": "^3.6.3",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "qs": "^6.9.1"
+    "qs": "^6.9.7"
   },
   "eslintConfig": {
     "root": true,
