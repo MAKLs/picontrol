@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bulma": "^0.8.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsdoc": "^3.6.3",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
